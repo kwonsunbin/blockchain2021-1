@@ -54,6 +54,3 @@ ERC 20 기반 토큰 발행 - solidity(openzepplin), remix 활용
 - 설문 조사 웹 페이지 완성
 - ERC20 기반 토큰과의 연동 시스템 구축
 - 발표 PPT 준비 및 발표 준비
-
-
-![image](https://user-images.githubusercontent.com/57449195/114879704-671b4980-9e3c-11eb-8fba-81aa6f5eda18.png)
