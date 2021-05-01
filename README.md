@@ -11,3 +11,5 @@ http://localhost:3000/balance
 
 송금 ( 프론트랑 맞춰서 수정 필요 )
 http://localhost:3000/transfer 
+
+home.html 위치: static/html/home.html
