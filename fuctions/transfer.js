@@ -12,7 +12,7 @@ const transfer = async (req, res, next) => {
   var destAddress = '0x906876E2A593A41651cD3eB8380376Ce73F61d90';
 
   // If your token is divisible to 8 decimal places, 42 = 0.00000042 of your token
-  var transferAmount = 1;
+  var transferAmount = 100;
 
   // Determine the nonce
   var count = await web3.eth.getTransactionCount(myAddress);

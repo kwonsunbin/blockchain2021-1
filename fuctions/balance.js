@@ -2,11 +2,11 @@ const Tx = require('ethereumjs-tx').Transaction;
 const web3 = require('../web3');
 const abiArray = require('../data/abi');
 
-const transfer = async (req, res, next) => {
+const balance = async (req, res, next) => {
   console.log(`web3 version: ${web3.version}`);
 
   // Who holds the token now?
-  var walletAddress = '0xcA8CF6b998d89bE0A0D09504C2f4Aaa4833F6ABe';
+  var walletAddress = '0x906876E2A593A41651cD3eB8380376Ce73F61d90';
 
   // Determine the nonce
   var count = await web3.eth.getTransactionCount(walletAddress);
@@ -20,6 +20,7 @@ const transfer = async (req, res, next) => {
 
   // How many tokens do I have before sending?
   var balance = await contract.methods.balanceOf(walletAddress).call();
+  balance = balance / 100;
   console.log(`Balance of wallet : ${balance}`);
 
   res.status(200).json({
@@ -30,4 +31,4 @@ const transfer = async (req, res, next) => {
   });
 };
 
-module.exports = transfer;
+module.exports = balance;
