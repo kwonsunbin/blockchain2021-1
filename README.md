@@ -19,7 +19,7 @@ http://localhost:3000/balance/
 * walletAddress는 참여자의 지갑 주소
 * contractAddress는 발행한 토큰의 스마트 컨트랙트 주소
 
-# 송금 ( 프론트랑 맞춰서 수정 필요 )
+# 송금
 http://localhost:3000/transfer/ 
 
 {
