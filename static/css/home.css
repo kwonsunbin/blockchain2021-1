@@ -15,6 +15,29 @@ main {
     background-color: #FFFFFF;
     padding: 15px;
     border-radius: 30px;
+    position: relative;
+}
+
+.form-wrapper .view-contract-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    display: flex;
+    color: #ffffff;
+    background-color: #55b5a2;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.form-wrapper .view-contract-btn > i {
+    font-size: 30px;
+}
+
+.form-wrapper .view-contract-btn:hover {
+    background-color: #30665b;
 }
 
 .form-wrapper > h1 {
