@@ -14,7 +14,7 @@ const getData = async param => {
 const showBalance = async () => {
     try {
         const balance = await getData("/balance");
-        title.innerText = String(balance.balance).concat(" TOK");
+        title.innerText = String(balance.balance).concat(" POL");
         setTimeout(() => {
             title.innerText = "설문조사";
         }, 2000);
