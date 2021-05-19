@@ -4,9 +4,11 @@ main {
     height: 100vh;
     background-color: #232229;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 .form-wrapper {
@@ -42,10 +44,32 @@ main {
 
 .form-wrapper > h1 {
     text-align: center;
-    line-height: 100px;
-    height: 100px;
+    line-height: 80px;
+    height: 80px;
     font-size: 40px;
     font-weight: bold;
+}
+
+.form-wrapper > .switch-view {
+    text-align: center;
+    margin-top: -7.5px;
+}
+
+.form-wrapper > .switch-view > .balance-icon{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+}
+
+.form-wrapper > .switch-view > .balance-icon{
+    cursor: pointer;
+    color: #D4AF37;
+}
+
+.form-wrapper > .switch-view > .balance-icon:hover {
+    color: #FF8C00;
+    border: 2px solid #FF8C00;
 }
 
 .form-wrapper > form {
@@ -64,17 +88,18 @@ main {
 
 .form-wrapper input {
     display: block;
+    font-size: 17.5px;
     background-color: #DCD9D9;
     width: 100%;
     height: 40px;
     border-radius: 10px;
+    padding: 10px;
     border: 0;
     margin-top: 8px;
 }
 
 .form-wrapper input:focus {
-    font-size: 17.5px;
-    padding: 10px;
+    outline: none;
 }
 
 .form-wrapper input[type="button"] {
@@ -89,4 +114,22 @@ main {
 .form-wrapper input[type="button"]:hover {
     background-color: #B08002;
     cursor: pointer;
+}
+
+.flash-screen {
+    display: none;
+    background-color: #35b072;
+    color: #ffffff;
+    width: 500px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.flash-screen.active {
+    display: block;
+}
+
+.flash-screen li {
+    line-height: 21.5px;
 }

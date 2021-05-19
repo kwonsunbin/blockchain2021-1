@@ -19,7 +19,12 @@
             target="_blank">
                 <i class="material-icons">qr_code_scanner</i>
             </a>
-            <h1>설문조사</h1>
+            <h1 id="title">설문조사</h1>
+            <div class="switch-view">
+                <button class="balance-icon">
+                    <i class="material-icons" >account_balance</i>
+                </button>
+            </div>
             <form action="">
                 <div class="form-element">
                     <label for="address">지갑 주소: </label>
@@ -34,10 +39,23 @@
                     <input type="text" name="name" id="name">
                 </div>
                 <div class="form-element">
-                    <input type="button" value="제출">
+                    <input id="submit-btn" type="button" value="제출">
                 </div>
             </form>
         </div>
+        <div class="flash-screen">
+            <ul>
+                <li>
+                    <span id="wallet-address">
+                    </span>
+                </li>
+                <li>
+                    <span id="amount"></span>
+                    <span>로 1개의 TOK가 전송되었습니다.</span>
+                </li>
+            </ul>
+        </div>
     </main>
+    <script src="../js/home.js"></script>
 </body>
 </html>
