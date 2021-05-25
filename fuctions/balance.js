@@ -8,7 +8,7 @@ const balance = async (req, res, next) => {
   var contract = new web3.eth.Contract(abiArray, contractAddress);
 
   var balance = await contract.methods.balanceOf(walletAddress).call();
-  console.log(`Balance of wallet : ${balance}`);
+  balance = balance / 100;
   res.status(200).json({
     success: true,
     balance,
