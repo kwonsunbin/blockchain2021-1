@@ -34,11 +34,14 @@ const submitForm = async () => {
         loader.classList.remove("active");
 
         flashScreen.classList.add("active");
-        const { destAddress } = data;
-        walletAddress.innerText = destAddress;
+        const walletAddressVal = data.walletAddress;
+        walletAddress.innerText = walletAddressVal;
         setTimeout(() => {
             flashScreen.classList.remove("active");
+            wrap.classList.remove("active");
+            intro.classList.add("active");
         }, 3000);
+
     }
     catch(err) {
         alert(err);
