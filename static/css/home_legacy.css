@@ -1,27 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-body {
-    background-color: #232229 !important;
-}
-
 main {
     height: 100vh;
     min-height: 100vh;
-    background-color: transparent;
+    background-color: #232229;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     position: relative;
 }
 
 nav {
     position: relative;
-    background-color: #232229;
-    padding: 15px 0;
+    width: 97.5%;
+    height: 60px;
+    /* border: 3px solid rgba(220, 217, 217, 0.4); */
+    /* border: 3px solid rgba(220, 217, 217, 0.8); */
+    margin: auto;
+    border-radius: 15px;
+    top: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar-container {
+    width: 85%;
+    max-width: 1280px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-right {
+    display: flex;
 }
 
 .navbar-item {
+    margin-right: 30px;
     line-height: 60px;
     color: #FFFFFF;
     font-size: 20px;
+    /* background-color: grey; */
     position: relative;
 }
 
@@ -29,8 +50,6 @@ nav {
     display: block;
     color: #FFFFFF;
     height: 100%;
-    text-decoration: none;
-
 }
 .navbar-item a:hover {
     color: #FF8C00;
@@ -56,6 +75,12 @@ nav {
 
 .intro {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 82.875%;
+    max-width: 1280px;
+    margin: auto;
 }
 
 .intro-row {
@@ -67,18 +92,14 @@ nav {
     width: 100%;
 }
 
-.intro-col {
-    height: 100%;
-}
-
 .intro-card {
     height: 100%;
+    width: 30%;
+    padding: 40px;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
     background-color: rgba(220, 217, 256, 0.2);
-    text-align: center;
-    word-break: keep-all;
 }
 
 .intro-card:before {
@@ -91,45 +112,25 @@ nav {
     filter: blur(5px);
 }
 
-
-@media (max-width: 575px) {
-    .intro-row .intro-col:nth-child(4n+1) .intro-card, .intro-row .intro-col:nth-child(4n) .intro-card {
-        color: #FFFFFF;
-    }
-    .intro-row .intro-col:nth-child(4n+1) .intro-card:hover, .intro-row .intro-col:nth-child(4n) .intro-card:hover {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 2s ease infinite;
-    }
-
-    .intro-row .intro-col:nth-child(4n+2) .intro-card, .intro-row .intro-col:nth-child(4n+3) .intro-card {
-        background-color: rgba(220, 217, 217, 0.9);
-        color: #333333;
-    }
-    .intro-row .intro-col:nth-child(4n+2) .intro-card:hover, .intro-row .intro-col:nth-child(4n+3) .intro-card:hover {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 2s ease infinite;
-    }
+.intro-card.b {
+    color: #FFFFFF;
 }
-@media (min-width: 576px) {
-    .intro-row .intro-col:nth-child(2n+1) .intro-card {
-        color: #FFFFFF;
-    }
-    .intro-row .intro-col:nth-child(2n+1) .intro-card:hover {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 2s ease infinite;
-    }
-    .intro-row .intro-col:nth-child(2n) .intro-card {
-        background-color: rgba(220, 217, 217, 0.9);
-        color: #333333;
-    }
-    .intro-row .intro-col:nth-child(2n) .intro-card:hover {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 2s ease infinite;
-    }
+
+.intro-card.w {
+    background-color: rgba(220, 217, 217, 0.9);
+    color: #333333;
+}
+
+.intro-card.b:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+}
+
+.intro-card.w:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
 }
 
 @keyframes gradient {
@@ -162,9 +163,6 @@ nav {
     flex-direction: column;
     align-items: center;
     position: relative;
-}
-.wrap-row {
-    height: 100%;
 }
 
 .form-wrapper {
@@ -278,7 +276,7 @@ nav {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }
 
